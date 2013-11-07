@@ -1320,17 +1320,18 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-  padding: 16px 17px 17px 65px;
+  padding: 17px 17px 17px 65px;
   background-image: image('/images/social/twitter.png');
   background-repeat: no-repeat;
   margin: 2.2em auto;
   border: 0;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch4-color;
+  font-family: @font-swatch6-font-family;
+  font-size: @font-swatch6-font-size;
+  font-weight:@font-swatch6-font-weight;
+  color: @font-swatch5-color;
   text-decoration: none;
   letter-spacing: @font-swatch7-letter-spacing;
+  text-transform:uppercase;
 }
 
 
@@ -1365,6 +1366,9 @@ hr.line.align-right {
     background-color: @font-swatch7-background-color;
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
 }
 
 .widget.socialicons span a:hover, .widget.profile 
@@ -1672,7 +1676,7 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
     left:0;
     right:0;
     top:auto;
-    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch4,10%)), 1); 
+    background-color: @color-swatch3; 
 }
 
 .widget.responsiveslideshow .title {
@@ -1773,6 +1777,19 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 
   .main {
     padding: 40px 0px;
+  }
+
+  /* FEATURE */
+
+  .widget.feature h2 {
+    font-size: bkscale(@font-swatch8-font-size,0.8);
+    line-height: bkscale(@font-swatch8-line-height,0.8);
+  }
+
+  .widget.feature h3 {
+    font-size: bkscale(@font-swatch9-font-size,0.8);
+    margin-top: 10px;
+    padding-top: 5px;
   }
 
   /* NAV */
@@ -1981,16 +1998,16 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
   .widget.feature .content {
     height: 500px;
     display: block;
-    padding-top: 4em;
+    padding-top: 1.5em;
   }
 
   .widget.feature h2 {
-    font-size: bkscale(@font-swatch8-font-size,0.8);
-    line-height: bkscale(@font-swatch8-line-height,0.8);
+    font-size: bkscale(@font-swatch8-font-size,0.4);
+    line-height: bkscale(@font-swatch8-line-height,0.5);
   }
 
   .widget.feature h3 {
-    font-size: bkscale(@font-swatch9-font-size,0.9);
+    font-size: bkscale(@font-swatch9-font-size,0.7);
     margin-top: 10px;
     padding-top: 5px;
   }
