@@ -1302,11 +1302,12 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-  padding: 17px 17px 17px 65px;
+  padding: 17px 17px 17px 62px;
   background-image: image('/images/social/twitter.png');
   background-repeat: no-repeat;
   margin: 2.2em auto;
-  border: 0;
+  border: 1px solid @color-swatch3;
+  background-color: @color-swatch3;
   font-family: @font-swatch6-font-family;
   font-size: @font-swatch6-font-size;
   font-weight:@font-swatch6-font-weight;
@@ -1494,18 +1495,17 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 }
 
 .widget.profile form input {
-    width: 210px;
-    height: 60px;
+    width: 100%;
+    height: 50px;
     padding: 0;
-    margin-right: 1%;
-    background-color: #3F3F3F;
+    margin-right: -1%;
+    background-color: @color-swatch1;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
-    text-indent: 14px;
-    border: 0;
-    border-right: 1px solid @color-swatch7;
-    border-bottom: 1px solid @color-swatch7;
+    text-indent: 20px;
+    border: 1px solid @color-swatch1;
+    max-width: 300px;
 }
 
 .widget.profile form input:focus {
@@ -1513,13 +1513,11 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 }
 
 .widget.profile form button {
-    width: 78px;
-    height: 62px;
+    width: 100px;
+    height: 52px;
     margin: 0;
     padding: 0;
     border: 0;
-    border-right: 1px solid @color-swatch7;
-    border-bottom: 1px solid @color-swatch7;
     background-color: @font-swatch7-background-color;
     font-family: @font-swatch7-font-family;
     font-weight: @font-swatch7-font-weight;
@@ -1530,7 +1528,6 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
     position: relative;
-    top: 3px;
 }
 
 .widget.profile form button:hover {
@@ -1570,11 +1567,10 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 .widget.signupform label {
     float: left;
     width: 100%;
-    margin-bottom: 8px;
     font-family:@font-swatch4-font-family;
-    font-size:@font-swatch4-font-size;
+    font-size:@font-swatch5-font-size;
     font-weight: @font-swatch4-font-weight;
-    color: lighten(@font-swatch5-color,20%);
+    color: @font-swatch4-color;
     line-height:@font-swatch4-line-height;
     letter-spacing: @font-swatch4-letter-spacing;
     text-transform: uppercase;
@@ -1582,15 +1578,14 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 
 .widget.signupform fieldset input {
     width: 100%;
-    height: 60px;
+    height: 51px;
     padding: 0;
-    margin-right: 1%;
-    background-color: @color-swatch2;
+    margin-right: -1%;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     text-indent: 20px;
-    border: 1px solid @color-swatch1;
+    border: 1px solid @color-swatch3;
     max-width: 300px;
 }
 
@@ -1599,30 +1594,28 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 }
 
 .widget.signupform button {
-    width: 100%;
-    height: 62px;
-    margin: 0;
-    padding: 0;
-    border: 1px solid #FFF;
-    background-color: #C58888;
-    font-family: Oswald;
-    font-weight: inherit;
-    letter-spacing: 1px;
-    color: #FFF;
-    font-size: 1em;
-    text-decoration: none;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    position: relative;
-    top: 3px;
-    max-width: 150px;
+  background-image: image('/images/button-arrow.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 8px 28px 7px 14px;
+  border: 1px solid @color-swatch3;
+  background-color: @font-swatch7-background-color;
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight:@font-swatch7-font-weight;
+  line-height: @font-swatch7-line-height;
+  letter-spacing: @font-swatch7-letter-spacing;
+  background-color: @font-swatch7-background-color;
+  color: @font-swatch7-color;
+  text-decoration: none;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  text-transform: uppercase;
 }
 
 .widget.signupform button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
 }
-
 
 /* ===============================
    SLIDESHOW WIDGET
