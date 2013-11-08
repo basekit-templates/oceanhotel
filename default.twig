@@ -4,12 +4,18 @@
 
 <div class="bk-pt-default">
 
-<header>
-    <div class="wrapper clearfix">
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+<section>
+    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
+    <div class="header-wrapper clearfix">
+        <header>
+            <div class="wrapper clearfix">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+                {{widget('extendednavigation', 'navigationheader', {})|raw}}
+            </div>
+        </header>
     </div>
-</header>
+</section>
 
 <div class="canvas">
     <div class="main wrapper clearfix">
@@ -19,9 +25,7 @@
 
 <footer>
     <div class="wrapper clearfix">
-        {{widget('content', 'footercolumn1content1', {"content":"<p>CONTACTOS</p>"})|raw}}        
-        {{widget('content', 'footercolumn1content2', {"content":"<h2>LOREM IPSUM ALAM YOU?</h2>"})|raw}}       
-        {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+        {{widget('companyaddress', 'companyaddress', {})|raw}}
         {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
     </div>
 </footer>
