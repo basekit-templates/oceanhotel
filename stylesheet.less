@@ -143,7 +143,7 @@ blockquote:after {
 }
 
 .main {
-  padding: 90px 0px;
+  padding: 60px 0px;
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
@@ -166,14 +166,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   bottom: inherit;
 }
 
-/* HEADER */
-
-.header-wrapper {
-  position: relative;
-  bottom: 0px;
-  z-index: 9999;
-}
-
 
 /* ===============================
    HEADER
@@ -183,7 +175,7 @@ header {
   padding: 0;
   width: 100%;
   position: absolute;
-  bottom: 807px;
+  top:0;
 }
 
 .companyheader {
@@ -229,7 +221,7 @@ header {
    =============================== */
 
 footer {
-  padding: 5em 0;
+  padding: 3em 0;
   text-align: center;
   background-repeat: repeat;
   color: @color-swatch1;
@@ -389,11 +381,9 @@ footer p {
 .widget.extendednavigation li:hover > ul {
   display: block;
   position: absolute;
-  right: 0;
-  left: 323px;
   background-color: none;
   z-index: 500;
-  top:70px;
+  top:72px;
 }
 
 .widget.extendednavigation li:hover > ul li {
@@ -1741,7 +1731,7 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 @media only screen and (max-width: 768px) {
 
   header {
-    bottom:605px;
+
   }
 
   .canvas {
@@ -1798,7 +1788,7 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
     .widget .extendednavigation ul {
         width: 100%;
         display: none;
-        padding: 20px 0;
+        background-color: hsla(hue(@color-swatch4), saturation(@color-swatch4), lightness(lighten(@color-swatch4,10%)), 0.9);
     }
 
     .widget .extendednavigation li {
@@ -1836,7 +1826,8 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
         width: 100%;
         bottom: inherit;
         padding: 0;
-        border-top: 1px solid lighten(@color-swatch7,15%);
+        background-color: hsla(hue(@color-swatch4), saturation(@color-swatch4), lightness(lighten(@color-swatch4,10%)), 0.9);
+        left:0px;
     }
 
     .widget.extendednavigation ul li:hover > ul li {
@@ -1861,6 +1852,11 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 
     .widget.feature .content {
         height: 700px;
+    }
+
+    .widget.extendednavigation li:hover > ul
+    {
+      top:52px;
     }
 
      /* GALLERY */
