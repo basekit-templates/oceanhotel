@@ -164,6 +164,10 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   bottom: inherit;
 }
 
+.widget .extendednavigation ul li:hover ul {
+  background-color:transparent;
+}
+
 
 /* ===============================
    HEADER
@@ -174,6 +178,7 @@ header {
   width: 100%;
   position: absolute;
   top:0;
+  background-color:transparent;
 }
 
 .companyheader {
@@ -532,6 +537,15 @@ footer p {
 
 .widget.feature .feature-bgimg {
   height: 900px;
+ }
+
+ .widget.feature .feature-bgimg .content h2 span{
+  padding:0;
+ }
+
+ .widget.feature .feature-bgimg .content button{
+  padding:8px 30px 10px 15px;
+  margin:0px auto;
  }
 
 .widget.feature .content {
@@ -1164,7 +1178,6 @@ hr.line.align-right {
     border: none;
     padding: 0;
     margin: 0;
-    background-color:@color-swatch2;
     padding:20px;
 }
 
@@ -1354,8 +1367,6 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-  padding: 17px 11px 17px 62px;
-  background-image: image('/images/social/twitter.png');
   background-repeat: no-repeat;
   margin: 2.2em auto;
   border: 1px solid @color-swatch3;
@@ -1363,7 +1374,6 @@ hr.line.align-right {
   font-family: @font-swatch6-font-family;
   font-size: @font-swatch6-font-size;
   font-weight:@font-swatch6-font-weight;
-  color: @font-swatch5-color;
   text-decoration: none;
   letter-spacing: @font-swatch7-letter-spacing;
 }
@@ -1399,8 +1409,8 @@ hr.line.align-right {
     margin-right: 6px;
     margin-bottom: 8px;
     background-size: 22px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border: 1px solid @color-swatch1;
     background-color: @font-swatch7-background-color;
     background-repeat: no-repeat;
@@ -1617,6 +1627,10 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
   padding: 0;
   border: 0;
   margin: 0;
+}
+
+.widget.signupform fieldset button {
+  padding: 8px 30px 9px 21px;
 }
 
 .widget.signupform label {
@@ -1992,7 +2006,11 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 @media only screen and (max-width: 480px) { 
 
   header{
-    bottom:405px;
+
+  }
+
+  .widget.feature .feature-bgimg .content {
+    height:500px;
   }
 
    .main {
