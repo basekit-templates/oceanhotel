@@ -1763,12 +1763,30 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev {
     left: 30px;
-    background: image('/images/slideshow-arrow-prev.png') no-repeat center left;
+    background: @color-swatch1;
+    border-radius: 100px;
+    border: 1px solid @color-swatch2;
+    &:after {
+    	color: darken(@color-swatch2, 10%);
+	    content: "\276E";
+		font-size: 23px;
+		line-height: 38px;
+		text-indent: -3px;
+    }
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-next {
     right: 30px;
-    background: image('/images/slideshow-arrow-next.png') no-repeat center right;   
+    background: @color-swatch1;
+    border-radius: 100px;
+    border: 1px solid @color-swatch2;
+    &:after {
+    	color: darken(@color-swatch2, 10%);
+	    content: "\276F";
+	    font-size: 23px;
+		line-height: 38px;
+		text-indent: 3px;
+    }
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls {
