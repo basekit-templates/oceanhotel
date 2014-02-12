@@ -4,9 +4,9 @@
 
 <div class="bk-pt-default">
 
-<section>
+<section class="bk-section">
     <div class="header-wrapper clearfix">
-        <header>
+        <header class="bk-header">
             <div class="wrapper clearfix">
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                 {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         {{widget('companyaddress', 'companyaddress', {})|raw}}
         {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 

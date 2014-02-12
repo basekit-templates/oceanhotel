@@ -154,7 +154,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 }
 
-.bk-pt-default header {
+.bk-pt-default .bk-header {
   position: relative;
   background-color: @color-swatch4;
   bottom:0;
@@ -176,12 +176,16 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   max-width:90px;
 }
 
+.widget .extendednavigation ul li.folder:after {
+	display: none;
+}
+
 
 /* ===============================
    HEADER
    =============================== */
 
-header {
+.bk-header {
   padding: 0;
   width: 100%;
   position: absolute;
@@ -231,7 +235,7 @@ header {
    FOOTER
    =============================== */
 
-footer {
+.bk-footer {
   padding: 3em 0;
   text-align: center;
   background-repeat: repeat;
@@ -239,20 +243,20 @@ footer {
   background-color: @color-swatch4;
 }
 
-footer h1, footer h2, footer h3, footer h4, footer p {
+.bk-footer h1, .bk-footer h2, .bk-footer h3, .bk-footer h4, .bk-footer p {
   font-family: @font-swatch2-font-family;
   color: @font-swatch8-color;
   font-weight: 300;
   padding-bottom: 6px;
 }
 
-footer h2 {
+.bk-footer h2 {
   padding: 20px 0px 30px;
   letter-spacing: 0.05em;
   border-bottom: 0;
 }
 
-footer p {
+.bk-footer p {
   letter-spacing: 2px;
   color: @font-swatch8-color;
   line-height:@font-swatch5-line-height;
@@ -1385,8 +1389,7 @@ hr.line.align-right {
 .widget.tweet a {
   background-repeat: no-repeat;
   margin: 2.2em auto;
-  border: 1px solid @color-swatch3;
-  background-color: @color-swatch3;
+  background-color: @font-swatch7-background-color;
   font-family: @font-swatch6-font-family;
   font-size: @font-swatch6-font-size;
   font-weight:@font-swatch6-font-weight;
@@ -1527,7 +1530,7 @@ hr.line.align-right {
 
 /* FOOTER PROFILE - SOCIAL */
 
-footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicons span a {
+.bk-footer .widget.socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a {
     border: 0;
     border-right: 1px solid @color-swatch7;
     border-bottom: 1px solid @color-swatch7;
@@ -1596,7 +1599,7 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 
 .widget.profile form button {
     width: 100px;
-    height: 52px;
+    //height: 42px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -1645,8 +1648,8 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
   margin: 0;
 }
 
-.widget.signupform fieldset button {
-  padding: 8px 30px 9px 21px;
+.widget.signupform fieldset button, button.blog-search-submit-button, .widget.profile input.btn {
+  padding: 6px 30px 7px 21px;
 }
 
 .widget.signupform label {
@@ -1660,7 +1663,7 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
     letter-spacing: @font-swatch4-letter-spacing;
 }
 
-.widget.signupform fieldset input {
+.widget.signupform fieldset input, .blog-search-input, .widget.profile input[type=email] {
     height: 51px;
     padding: 0;
     margin-right: -2%;
@@ -1676,11 +1679,11 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
   outline: none;
 }
 
-.widget.signupform button {
+.widget.signupform button, .blog-search-submit-button, .widget.profile .btn {
   background-image: image('/images/button-arrow.png');
   background-position: right center;
   background-repeat: no-repeat;
-  padding: 8px 28px 7px 14px;
+  padding: 6px 28px 7px 14px;
   border: 1px solid @color-swatch3;
   background-color: @font-swatch7-background-color;
   font-family: @font-swatch7-font-family;
@@ -1694,7 +1697,7 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
   text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
-.widget.signupform button:hover {
+.widget.signupform button:hover, .blog-search-submit-button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
 }
@@ -1708,7 +1711,10 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
 }
 
 .widget.responsiveslideshow .slideshow-widget {
-
+	.slide-ctrl {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .widget.responsiveslideshow span.inner img {
@@ -1837,10 +1843,6 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
    =============================== */
 
 @media only screen and (max-width: 768px) {
-
-  header {
-
-  }
 
   .canvas {
     width: 100%;
@@ -2052,10 +2054,6 @@ footer .widget.socialicons span a, footer .widget.profile .bk-profile-socialicon
    =============================== */
 
 @media only screen and (max-width: 480px) { 
-
-  header{
-
-  }
 
   .widget.feature .feature-bgimg .content {
     height:500px;
