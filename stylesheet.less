@@ -553,7 +553,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   letter-spacing: @font-swatch9-letter-spacing;
   display: inline-block;
   border-top: 1px solid @color-swatch1;
-  margin-top: 15px;
+  margin-top: 30px;
   padding-top: 10px;
 }
 
@@ -2131,6 +2131,10 @@ hr.line.align-right {
 
 @media only screen and (max-width: 768px) {
 
+  .widget.feature h3 {
+    margin-top:0;
+  }
+
   .canvas {
     width: 100%;
   } 
@@ -2142,13 +2146,13 @@ hr.line.align-right {
   /* FEATURE */
 
   .widget.feature .feature-bgimg .content h2 {
-    font-size: bkscale(@font-swatch8-font-size,0.6);
-    line-height: bkscale(@font-swatch8-line-height,0.6);
+    font-size: bkscale(@font-swatch2-font-size,1);
+    line-height: bkscale(@font-swatch1-line-height,1.4);
   }
 
   .widget.feature .feature-bgimg .content h3 {
-    font-size: bkscale(@font-swatch9-font-size,0.8);
-    margin-top: 10px;
+    font-size: bkscale(@font-swatch2-font-size,0.4);
+    line-height: bkscale(@font-swatch2-line-height,1);
     padding-top: 5px;
   }
 
@@ -2359,10 +2363,12 @@ hr.line.align-right {
 
   h1 {
     font-size: bkscale(@font-swatch1-font-size,0.9);
+    line-height: bkscale(@font-swatch1-line-height,1);
   }
 
   h2 {
     font-size: bkscale(@font-swatch2-font-size,0.9);
+    line-height: bkscale(@font-swatch2-line-height,1);
   }
 
   /* UL ALIGN RIGHT */
@@ -2400,20 +2406,16 @@ hr.line.align-right {
     padding-top: 2em;
   }
 
-  .widget.feature h2 {
-    font-size: bkscale(@font-swatch8-font-size,0.3);
-    line-height: bkscale(@font-swatch8-line-height,0.4);
+  .widget.feature .feature-bgimg .content h2 {
+    font-size: bkscale(@font-swatch1-font-size,0.9);
+    line-height: bkscale(@font-swatch1-line-height,0.9);
   }
 
   .widget.feature .feature-bgimg .content h3 {
-    font-size: bkscale(@font-swatch8-font-size,0.25);
-    line-height: bkscale(@font-swatch8-line-height,0.3);
+    font-size: bkscale(@font-swatch2-font-size,0.4);
+    line-height: bkscale(@font-swatch2-line-height,0.6);
     margin-top: 10px;
     padding-top: 5px;
-  }
-
-  .widget.feature button {
-
   }
 
   .widget.feature .content .spare{
