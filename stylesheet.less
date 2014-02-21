@@ -190,9 +190,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .bk-footer h1, .bk-footer h2, .bk-footer h3, .bk-footer h4, .bk-footer p {
-  font-family: @font-swatch2-font-family;
+  font-family: @font-swatch8-font-family;
   color: @font-swatch8-color;
-  font-weight: 300;
+  font-weight: @font-swatch8-color;
+  letter-spacing:@font-swatch8-letter-spacing;
+  line-height:@font-swatch8-line-height;
   padding-bottom: 6px;
 }
 
@@ -201,14 +203,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   letter-spacing: 0.05em;
   border-bottom: 0;
 }
-
-.bk-footer p {
-  letter-spacing: 2px;
-  color: @font-swatch8-color;
-  line-height:@font-swatch5-line-height;
-}
-
-
 
 /* ===============================
    STANDARD NAVIGATION
@@ -1749,7 +1743,7 @@ hr.line.align-right {
 
  .widget.dropbox .b-wrap .btn {
  margin: 0;
- padding: 20px 22px 20px 45px;
+ padding: 10px 22px 10px 45px;
  background-image: image('/images/dropbox-icon.png');
  background-size: 20px;
  background-repeat: no-repeat;
@@ -1786,7 +1780,7 @@ hr.line.align-right {
 
 .widget.paypalbuynow .widget.button.paypal {
   margin: 0;
-  padding: 16px 22px 16px 45px;
+  padding: 10px 22px 10px 45px;
   background-image: image('/images/paypal.png');
   background-size: 20px;
   background-repeat: no-repeat;
@@ -2273,6 +2267,17 @@ hr.line.align-right {
       margin:0;
     }
 
+    .widget.extendednavigation {
+       display: block;
+       width: 100%;
+       padding: 0;
+       top: 0px;
+    }
+
+    .widget.extendednavigation ul {
+      margin-top:0;
+    }
+
      /* GALLERY */
     .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
       max-height: 220px;
@@ -2335,13 +2340,6 @@ hr.line.align-right {
       display:none;
     }
 
-    .widget.extendednavigation {
-    display: block;
-    width: 100%;
-    padding: 0;
-    top: 0px;
-    }
-
 }
 
 
@@ -2382,6 +2380,10 @@ hr.line.align-right {
     padding: 0;
     top: 0px;
   }
+
+    .widget.extendednavigation ul {
+      margin-top:0;
+    }
 
   /* FEATURE */
 
