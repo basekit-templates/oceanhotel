@@ -305,7 +305,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-  display: block;
   font-family:@font-swatch6-font-family;
   font-size:@font-swatch6-font-size;
   font-weight: @font-swatch6-font-weight;
@@ -323,8 +322,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 /* FOLDER */
 
 .bk-pt-default .widget.extendednavigation ul li.folder {
-  padding-right: 15px;
-  background-position: right 10px;
+  padding-right: 23px;
+  background-position: right center;
 }
 
 .bk-pt-default .widget .extendednavigation ul li:hover ul {
@@ -420,7 +419,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .main .widget.extendednavigation ul li a, .main .widget.extendednavigation ul li.folder .text {
-  display: block;
   padding: 32px 30px;
   font-family:@font-swatch6-font-family;
   font-size:@font-swatch6-font-size;
@@ -2215,6 +2213,7 @@ hr.line.align-right {
 
     .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
         padding: 12px;
+        display: inline-block;
     }
 
     .widget.extendednavigation ul li .text, .widget.extendednavigation ul li.folder .text {
@@ -2224,12 +2223,7 @@ hr.line.align-right {
         background-repeat: no-repeat;
     }
 
-    .widget.extendednavigation ul li > ul {
-        display: none!important;
-    }
-
     .widget.extendednavigation ul li:hover > ul {
-        display: block!important;
         width: 100%;
         bottom: inherit;
         padding: 0;
