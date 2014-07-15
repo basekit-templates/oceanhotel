@@ -3,8 +3,6 @@
 {% block content %}
 
 <section class="bk-section">
-    
-    {{widget('feature', 'thisunqiuewidgetname', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
     <div class="header-wrapper clearfix">
         <header class="bk-header">
             <div class="wrapper clearfix">
@@ -13,6 +11,8 @@
                 {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
             </div>
         </header>
+            
+    {{widget('feature', 'thisunqiuewidgetname', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
     </div>
 </section>
 
