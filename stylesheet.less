@@ -262,7 +262,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   float: right;
   position: relative;
   width: 80%;
-  z-index:1;
+  z-index: 9999;
 }
 
 .widget.extendednavigation a.pull {
@@ -500,22 +500,23 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    FEATURE
    =============================== */
 
-   .widget.feature .feature-bgimg .content {
-    background-color:rgba(1, 1, 1, 0.2);
-   }
+.widget.feature .feature-bgimg .content {
+  background-color:rgba(1, 1, 1, 0.2);
+}
 
-  .widget.feature .feature-bgimg .content .spare {
-    margin-top:50px;
-  }
+.widget.feature .feature-bgimg .content .spare {
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
 
- .widget.feature .feature-bgimg .content h2 span{
+.widget.feature .feature-bgimg .content h2 span{
   padding:0;
- }
+}
 
- .widget.feature .feature-bgimg .content button{
+.widget.feature .feature-bgimg .content button{
   padding:8px 30px 10px 15px;
   margin:0px auto;
- }
+}
 
 .widget.feature .content {
   text-align: center;
