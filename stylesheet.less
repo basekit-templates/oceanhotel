@@ -141,7 +141,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .companyheader {
   display: block;
-  float: left;
   padding: 20px 0px 18px;
 }
 
@@ -149,7 +148,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .widget.companyname {
   display: block;
-  float: left;
   margin: 24px 0px;
   z-index:9999;
 }
@@ -172,10 +170,16 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .widget.logo {
   display: block;
-  float: left;
   margin-right: 10px;
   margin-top:25px;
   z-index:9999;
+}
+
+.widget {
+    &.logo, &.companyname {
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 
@@ -271,8 +275,14 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   position: absolute;
   right: 0;
   margin-right: 10px;
-  top: -55px;
+  top: -45px;
 } 
+
+.extendednavigation li.selected {
+    a, .text {
+        color: @font-swatch6-color-hover;
+    }
+}
 
 /* ALIGNMENTS */
 
@@ -325,7 +335,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .widget.extendednavigation ul li.folder {
-  padding-right: 8px;
+  padding-right: 20px;
   background-image: image('/images/nav-arrow.png');
   background-position: right 10px;
   background-repeat: no-repeat;
@@ -2162,8 +2172,10 @@ hr.line.align-right {
 
   .widget.extendednavigation {
     display: block;
-    width: 100%;
+    width: 90%;
     padding: 0;
+    margin:0 5%;
+    top: 0px;
   }
 
   /* NAV ICON */
@@ -2237,6 +2249,10 @@ hr.line.align-right {
         background-repeat: no-repeat;
     }
 
+    .widget .extendednavigation ul li:hover ul {
+      background-color:lighten(@color-swatch4,5%);
+    }
+
     /* EXTENDED NAVIGATION - INSIDE ZONE */
 
     .main .widget.extendednavigation ul {
@@ -2254,23 +2270,20 @@ hr.line.align-right {
     }
 
     .widget .extendednavigation ul li.folder ul li a .text {
-    padding:0px 20px;
+      padding:0px 20px;
     }
 
     .widget .extendednavigation ul li:hover ul {
       margin:0;
     }
 
-    .widget.extendednavigation {
-       display: block;
-       width: 100%;
-       padding: 0;
-       top: 0px;
-    }
-
     .widget.extendednavigation ul {
       margin-top:0;
     }
+
+    .widget .extendednavigation ul.align-right li.folder span {
+      padding-right:40px;
+    } 
 
      /* GALLERY */
     .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
@@ -2367,28 +2380,8 @@ hr.line.align-right {
 
   /* UL ALIGN RIGHT */
 
-  .widget.extendednavigation ul.align-right li.folder {
-    background-position: 12px center;
-    padding-right: 0;
-  }
-
-   /* EXTENDED NAV */
-
-  .widget.extendednavigation {
-    display: block;
-    width: 100%;
-    padding: 0;
-    top: 0px;
-  }
-
-    .widget.extendednavigation ul {
-      margin-top:0;
-    }
-
   /* FEATURE */
 
-  .widget.feature {
-  }
 
   .widget.feature .feature-bgimg {
     height: 400px; 
