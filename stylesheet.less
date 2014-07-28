@@ -131,9 +131,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    HEADER
    =============================== */
 
-.bk-header {
+header.bk-header {
   padding: 0;
-  width: 100%;
+  width: 90%;
   position: absolute;
   top:0;
   background-color:transparent;
@@ -256,8 +256,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .widget.extendednavigation {
   float: right;
   position: relative;
-  width: 80%;
   z-index: 9999;
+  max-width: 50%;
+  margin-top: 30px;
 }
 
 .widget.extendednavigation a.pull {
@@ -275,7 +276,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   position: absolute;
   right: 0;
   margin-right: 10px;
-  top: -45px;
+  top: 0px;
 } 
 
 .extendednavigation li.selected {
@@ -2196,6 +2197,10 @@ hr.line.align-right {
   }
 
     /* NAV */
+
+    .widget.extendednavigation {
+      top:-45px;
+    }
 
     .widget .extendednavigation ul {
         width: 100%;
