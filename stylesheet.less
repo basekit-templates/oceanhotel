@@ -96,6 +96,15 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   position: relative;
   background-color: @color-swatch4;
   bottom:0;
+  width:100%;
+  margin:0;
+}
+
+.bk-pt-default .widget.extendednavigation ul {
+  margin:20px 0px;
+  @media @tablet {
+    background-color:transparent;
+  }
 }
 
 .bk-pt-default .widget.extendednavigation li:hover > ul {
@@ -103,7 +112,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .widget .extendednavigation ul li:hover ul {
-  background-color:transparent;
+    background-color: @color-swatch4;
 }
 
 .widget .extendednavigation ul li.folder .text:after {
@@ -259,7 +268,6 @@ header.bk-header {
   position: relative;
   z-index: 9999;
   max-width: 50%;
-  margin-top: 30px;
 }
 
 .widget.extendednavigation a.pull {
@@ -1971,7 +1979,6 @@ hr.line.align-right {
     width: 90%;
     padding: 0;
     margin:0 5%;
-    top: -90px;
   }
 
   /* NAV ICON */
@@ -1979,6 +1986,7 @@ hr.line.align-right {
   .widget .extendednavigation a.pull {
     display: block;
     position: absolute;
+    top:-40px;
   }
 
     .widget .extendednavigation a.pull:after {
@@ -1992,6 +2000,10 @@ hr.line.align-right {
   }
 
     /* NAV */
+
+    .widget.extendednavigation {
+      max-width:100%;
+    }
 
     .widget .extendednavigation ul {
         width: 100%;
@@ -2172,6 +2184,10 @@ hr.line.align-right {
 
   .signupform fieldset input {
     width:60%;
+  }
+
+  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
+    padding:3px 12px;
   }
 
   /* UL ALIGN RIGHT */
