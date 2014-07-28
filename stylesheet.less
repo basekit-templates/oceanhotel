@@ -137,6 +137,7 @@ header.bk-header {
   position: absolute;
   top:0;
   background-color:transparent;
+  margin:0 5%;
 }
 
 .companyheader {
@@ -275,7 +276,6 @@ header.bk-header {
   display: block;
   position: absolute;
   right: 0;
-  margin-right: 10px;
   top: 0px;
 } 
 
@@ -535,12 +535,6 @@ header.bk-header {
 /* FEATURE TITLE */
 
 .widget.feature h2 {
-  font-family:@font-swatch8-font-family;
-  font-size:@font-swatch8-font-size;
-  font-weight: @font-swatch8-font-weight;
-  line-height:@font-swatch8-line-height;
-  color: @font-swatch8-color;
-  letter-spacing: @font-swatch8-letter-spacing;
   display: inherit;
   border-bottom: 0;
   padding-bottom: 0;
@@ -549,12 +543,6 @@ header.bk-header {
 /* FEATURE STRAPLINE */
 
 .widget.feature h3 {
-  font-family:@font-swatch9-font-family;
-  font-size:@font-swatch9-font-size;
-  font-weight: @font-swatch9-font-weight;
-  line-height:@font-swatch9-line-height;
-  color: @font-swatch9-color;
-  letter-spacing: @font-swatch9-letter-spacing;
   display: inline-block;
   border-top: 1px solid @color-swatch1;
   margin-top: 30px;
@@ -593,38 +581,6 @@ header.bk-header {
 
 .widget.feature button:active {
   box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
-
-.widget.feature button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.feature button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.feature button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.feature button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.feature button.btn.italic {
-    font-style: italic;
-}
-
-.widget.feature button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.feature button span {
-    vertical-align: center;
 }
 
 .widget.feature button i {
@@ -1161,7 +1117,6 @@ header.bk-header {
 }
 
 
-
 /* ===============================
    BUTTON CSS
    =============================== */
@@ -1194,41 +1149,6 @@ header.bk-header {
 {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
-}
-
-
-/* JUSTIFY */
-
-.widget.button button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.button button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.button button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.button button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.button button.btn.italic {
-    font-style: italic;
-}
-
-.widget.button button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.button span {
-    vertical-align: center;
 }
 
 .widget.button i {
@@ -1484,37 +1404,6 @@ hr.line.align-right {
 }
 
 
-/* CLICK TO CALL - JUSTIFY */
-
-.widget.clicktocall a.justifyleft
-{
-    text-align: left;
-}
-
-.widget.clicktocall a.justifycenter
-{
-    text-align: center;
-}
-
-.widget.clicktocall a.justifyright
-{
-    text-align: right;
-}
-
-.widget.clicktocall a.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.clicktocall a.italic {
-    font-style: italic;
-}
-
-.widget.clicktocall a.bold {
-    font-weight: bold;
-}
-
-
 /* ===============================
    REDIRECT WIDGET
    =============================== */
@@ -1714,34 +1603,6 @@ hr.line.align-right {
   box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
 }
 
-.widget.contactform fieldset button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.contactform fieldset button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.contactform fieldset button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.contactform fieldset button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.contactform fieldset button.btn.italic {
-    font-style: italic;
-}
-
-.widget.contactform fieldset button.btn.bold {
-    font-weight: bold;
-}
-
 /* ===============================
    DROPBOX WIDGET
    =============================== */
@@ -1869,72 +1730,6 @@ hr.line.align-right {
 .bk-profile-socialicons span a:hover {
     background-color: @font-swatch7-background-color-hover;
 }
-
-/* SVG ICONS */
-
-.svg .widget.socialicons span.bk-socialicons-twitter a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/social/socialicons-twitter.svg');
-}
-
-.svg .widget.socialicons span.bk-socialicons-linkedin a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/images/social/socialicons-linkedin.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-facebook a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-    background-image: image('/images/social/socialicons-facebook.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-rss a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-    background-image: image('/images/social/socialicons-rss.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-googleplus a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/images/social/socialicons-googleplus.svg')
-}
-
-.svg .widget.socialicons span.bk-socialicons-youtube a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-    background-image: image('/images/social/socialicons-youtube.svg')
-}
-
-/* PNG ICONS */
-
-.widget.socialicons span.bk-socialicons-twitter a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/social/socialicons-twitter.png');
-}
-
-.widget.socialicons span.bk-socialicons-linkedin a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/images/social/socialicons-linkedin.png')
-}
-
-.widget.socialicons span.bk-socialicons-facebook a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-    background-image: image('/images/social/socialicons-facebook.png')
-}
-
-.widget.socialicons span.bk-socialicons-rss a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-    background-image: image('/images/social/socialicons-rss.png')
-}
-
-.widget.socialicons span.bk-socialicons-googleplus a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/images/social/socialicons-googleplus.png')
-}
-
-.widget.socialicons span.bk-socialicons-youtube a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-    background-image: image('/images/social/socialicons-youtube.png')
-}
-
-
 
 /* ===============================
    PROFILE WIDGET
@@ -2176,7 +1971,7 @@ hr.line.align-right {
     width: 90%;
     padding: 0;
     margin:0 5%;
-    top: 0px;
+    top: -120px;
   }
 
   /* NAV ICON */
@@ -2197,10 +1992,6 @@ hr.line.align-right {
   }
 
     /* NAV */
-
-    .widget.extendednavigation {
-      top:-45px;
-    }
 
     .widget .extendednavigation ul {
         width: 100%;
@@ -2512,6 +2303,10 @@ hr.line.align-right {
   {
       width: 50%;
       padding-bottom: 50%;
+  }
+
+  .widget.feature .feature-bgimg .content .spare {
+    margin-top: 210px;
   }
 
 
