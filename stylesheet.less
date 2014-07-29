@@ -270,10 +270,14 @@ header.bk-header {
   display: block;
   width: 100%;
   padding: 0 22px;
+  @media @tablet {
+    padding: 0;
+  }
 }
 
 .widget .extendednavigation ul li:hover ul {
     min-width: auto;
+    padding: 10px 0;
 }
 
 .widget.extendednavigation li:hover > ul li a {
@@ -1699,15 +1703,7 @@ hr.line.align-right {
     .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
         padding: 4px 10px;
     }
-
-    .widget.extendednavigation ul li:hover > ul {
-        width: 100%;
-        bottom: inherit;
-        padding: 0;
-        background-color: lighten(@color-swatch4,10%);
-        left:0px;
-    }
-
+    
     .widget .extendednavigation ul li:hover ul {
       background-color:lighten(@color-swatch4,5%);
     }
