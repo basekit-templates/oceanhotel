@@ -16,21 +16,22 @@ body {
   padding: 0;
 }
 
+@media only screen and (min-width: 1140px) {
+  .wrapper {
+    width: 960px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+
 .wrapper {
-  width: 90%;
-  margin: 0 5%;
+    width: 90%;
+    margin: 0 5%;
 }
 
-a {
-  font-family:@font-swatch2-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  color:@color-swatch4;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.header-wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -64,11 +65,6 @@ blockquote:before {
 /* ===============================
    CUSTOM CSS
    =============================== */
-
-.widget.menusections ul {
-  margin:0px auto;
-  display:table;
-}
 
 .canvas  {
   background-color: @color-swatch1;
@@ -166,17 +162,14 @@ header.bk-header {
    =============================== */
 
 .bk-footer {
-  padding: 3em 0;
-  text-align: center;
-  background-repeat: repeat;
-  color: @color-swatch1;
-  background-color: @color-swatch4;
-}
-
-.bk-footer h2 {
-  padding: 20px 0px 30px;
-  letter-spacing: 0.05em;
-  border-bottom: 0;
+    padding: 3em 0;
+    text-align: center;
+    background-repeat: repeat;
+    color: @color-swatch1;
+    background-color: @color-swatch4;
+    h1, h2, h3, h4, h5, p {
+        color: @color-swatch1;
+    }
 }
 
 /* ===============================
@@ -246,7 +239,7 @@ header.bk-header {
 .widget.extendednavigation li:hover > ul {
   display: block;
   position: absolute;
-  background-color: @color-swatch4;
+  background-color: @color-swatch3 ;
   z-index: 500;
   padding:20px 0px;
   min-width: auto;
@@ -326,10 +319,7 @@ header.bk-header {
             .spare {
                 padding: 13em 0 9em;
                 @media @tablet {
-                    padding: 9em 0 6em;
-                }
-                @media @mobile {
-                    padding: 6em 0 5em;
+                    padding: 10em 0 6em;
                 }
             }
         }
@@ -342,82 +332,6 @@ header.bk-header {
 
 .widget.profile form fieldset input {
   background-color:@color-swatch1;
-}
-
-/* ===============================
-  BLOG
-   =============================== */
-
-.widget {
-    &.blogpostlist {
-        .blog-post-item {
-            border-bottom: 1px dotted @color-swatch5;
-        }
-
-    }
-}
-
-.blog-post-item {
-    margin: 1.5em 0;
-    padding-bottom: 1em;
-    h2 {
-        a {
-            font-family: @font-swatch2-font-family;
-            font-size: @font-swatch2-font-size;
-            font-weight: @font-swatch2-font-weight;
-            line-height: @font-swatch2-line-height;
-            color: @font-swatch2-color;
-            letter-spacing: @font-swatch2-letter-spacing;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-.blog-post-metadata {
-    background-color: transparent;
-    background-image: none;
-    margin-top: 0;
-    text-align: left;
-}
-
-.blog-list-footer {
-    background-color: transparent;
-    background-image: none;
-}
-
-.blog-post-more-link {
-    float: left;
-    width: 100%;
-}
-
-/* BLOG SEARCH */
-.blogsearch {
-    form {
-        button {
-            padding: 6px 30px 7px 21px;
-            color: @font-swatch7-color;
-            font-size: @font-swatch6-font-size;
-            font-weight: @font-swatch6-font-weight;
-            line-height: @font-swatch6-line-height;
-            background-color: @font-swatch7-background-color;
-            border: none;
-            background-image: image('/images/button-arrow.png');
-            background-position: right center;
-            background-repeat: no-repeat;
-            padding: 12px 24px 11px 15px;
-            background-size: 15px;
-            &:hover {
-                background-color:@color-swatch3;
-            }
-        }
-    }
-}
-
-.blog-search-input {
-  width:74%;
 }
 
 /* ===============================
@@ -519,365 +433,66 @@ header.bk-header {
     top:-10px;
 }
 
-/* ===============================
-   6. MENU
-   =============================== */
+// -----------------------------
+// Buttons
+// -----------------------------
 
-.container {
-    border:1px solid black;
-    margin-top:40px;
-    padding-bottom:40px;
+// Overrides
+.widget.button button {
+    margin: 10px 0;
 }
 
-.widget.menu .menu-subsection {
-    border:0px;
+// General
+.widget.button button,
+button.btn, 
+.widget.profile form button, 
+.contactform button.btn, 
+.btn,
+.widget.dropbox button, 
+.checkout-order-button, 
+.checkout-empty-link,
+.widget.tweet a,
+.widget.paypalbuynow .widget.button.paypal,
+.blog-post-more-link a,
+.widget.ecombasket .ecombasket-pull,
+.ecombasket-checkout-link,
+.widget.ecomcheckout .checkout-order-button,
+.blog-list-footer.bk-footer a,
+.productlist-search button,
+.blog-search-submit-button {
+    margin: 0 0 5px;
+    padding: 8px 10px;
+    border: 1px solid @color-swatch1;
+    background-color: @font-swatch7-background-color;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    letter-spacing: @font-swatch7-letter-spacing;
+    background-color: @font-swatch7-background-color;
+    color: @font-swatch7-color;
+    text-decoration: none;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
-.widget.menu {
-    margin:0 auto;
-    @media only screen and (max-width: 1084px) {
-         width: 90%;
-    }
-    @media @tablet {
-        background-image: none;
-        width:100%;
-    }
-
-    .main {
-        width: 90%;
-        padding-top:30px;
-        margin: 0 auto;
-            @media only screen and (max-width: 1084px) {
-                width: 93%;
-            }
-            @media @tablet {
-                background-color: @color-swatch1;
-                width:90%;
-                padding: 10px 0;
-            }
-            @media @mobile {
-                margin-bottom: 10px;
-                padding:0;
-            }
-
-            ol, li {    /* removes list-style */
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            } 
-
-
-            /* MENU-HEADER AND SUB-SECTION HEADER */
-
-            .menu-header, .menu-subsection-header {
-                padding: 0 0 1.2em;
-                    @media @tablet {
-                        padding: 1.25em 0 0.75em;
-                    }
-                    h1, h2, {    /* menu-name menu-section-name */
-                        text-align: center;
-                        overflow: hidden; 
-                    &:before, &:after {
-                        content: "";
-                        @media only screen and (max-width: 480px) {
-                            content: none;
-                            display: block;
-                            height: auto;
-                            width: auto;
-                            margin-bottom: 0;
-                        }
-                    }
-                    &:before {
-                        @media only screen and (max-width: 480px) {
-                            right: 0;
-                            margin-left: 0;
-                         }
-                    }
-                    &:after {
-                        @media only screen and (max-width: 480px) {
-                            right: 0;
-                            margin-left: 0;
-                         }
-                    }
-                @media only screen and (max-width: 480px) {
-                     padding: 1em 0 0.5em;
-                }
-            }
-                    p {    /* menu-description  menu-section-description  menu-availability */
-                        text-align: center;       
-                    }  
-            }   /* end MENU-HEADER AND SUB-SECTION HEADER */
-
-
-            /* ITEMS */
-
-            .menu-items { /* ol */
-
-                li {    /* menu-item */
-                    display:block;
-                    position: relative;
-                    &.menu-item-promoted { /* menu-item-promoted */
-                        padding: 1.2em;
-                        margin: 11px 1px 20px;
-                        border: 5px solid @color-swatch3;
-                        .inner-item {
-                            border: 0;
-                            padding: 0;
-                            margin: 0;
-                        }
-                        h3 {
-                            width: auto;
-                            margin-top: 0 !important;
-                            margin-right: 1em !important;
-                        }
-                    }   /* end menu-item-promoted */
-
-                    .inner-item {
-                        border-bottom: 1px solid @color-swatch3;
-                        padding-bottom: 30px;
-                        margin-bottom: 30px;
-                        h3 {    /* menu-item-name */  
-                            padding: 0;
-                            font-family: @font-swatch3-font-family;
-                            color: @font-swatch3-color;
-                        }
-                        /* Menu image background */
-
-                        .menu-item-image-wrap {
-                           background-size: cover;
-                           background-position: center;
-                           -webkit-background-size: cover;
-                           -moz-background-size: cover;
-                           -o-background-size: cover;
-                           clear:both;
-                           background-repeat: no-repeat;
-                           height: 200px;
-                           background-position: center;
-                           -webkit-border-radius: 5px;
-                           -moz-border-radius: 5px;
-                           border-radius: 5px;
-                           img {
-                               display: none;
-                           }
-                        }
-                        .menu-item-price p {   /* standard-price */
-                            font-family:@font-swatch3-font-family;
-                            font-size:@font-swatch3-font-size;
-                            font-weight: @font-swatch3-font-weight;
-                            line-height:@font-swatch3-line-height;
-                            color: @font-swatch3-color;
-                            letter-spacing: @font-swatch3-letter-spacing;
-                            padding: 0px;
-                            margin: 0;
-                            display: block;
-                        }
-                        p {    /* item-description */
-                            font-family:@font-swatch5-font-family;
-                            font-size:@font-swatch5-font-size;
-                            font-weight: @font-swatch5-font-weight;
-                            line-height:@font-swatch5-line-height;
-                            color:@font-swatch5-color;
-                            letter-spacing: @font-swatch5-letter-spacing;
-                            float: left;
-                            padding: 0;
-                        }
-                        h4 {  /* nutritional-title */
-                            font-family:@font-swatch4-font-family;
-                            font-size:@font-swatch4-font-size;
-                            font-weight: @font-swatch4-font-weight;
-                            line-height:@font-swatch4-line-height;
-                            color: @font-swatch4-color;
-                            letter-spacing: @font-swatch4-letter-spacing;
-                            float: left;
-                            width: 100%;
-                            margin: 0;
-                            padding: 0;
-                        }
-                        .menu-item-nutritional-prop { 
-                            font-size:@font-swatch5-font-size;
-                            font-weight: @font-swatch5-font-weight;
-                            line-height:@font-swatch5-line-height;
-                            color: @font-swatch5-color;
-                            float: left;
-                            width: 100%;
-                            margin: 0;
-                            padding: 0;
-                        }
-                        .menu-section-item-dietary-props {
-                                margin-top: 0.5em;
-                                padding: 0;
-                                clear: both;
-                                display: block;
-                                .dietary-icon {
-                                    background-color: @color-swatch3;
-                                    width: auto;
-                                    height: auto;
-                                    border: 0;
-                                    -webkit-border-radius: 5px;
-                                    -moz-border-radius: 5px;
-                                    border-radius: 5px;
-                                    background-repeat: no-repeat;
-                                    background-size: 19px;
-                                    background-position: center;
-                                    font-family:@font-swatch5-font-family;
-                                    font-size:@font-swatch5-font-size;
-                                    z-index: 9999999;
-                                    color: @color-swatch1;
-                                    margin-right: 5px;
-                                    padding:5px;
-                                }                                
-                                .not-spicy-icon {
-                                    display:none;
-                                }
-
-                            } /* end menu-section-item-dietary-props */ 
-
-                        .menu-item-description, .menu-section-item-description {
-                            margin-bottom: 0.5em;
-                            width: 100%;
-                        }
-
-                    }   /* end inner-item */
-
-                }  /* end li .menu-item */
-
-            }   /* end ol .menu-items */  
-
-            .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */  
-                border: 6px solid @color-swatch3;
-                padding: 2em 2em 0;
-                margin-bottom: 2em;
-                position: relative;
-                &:before {
-                   content: " ";
-                   position: absolute;
-                   top: 3px;
-                   left: 3px;
-                   right: 3px;
-                   bottom: 3px;
-               }
-                @media @mobile {
-                    padding: 0 2em 0;
-                }
-                .menu-subsection-header {
-                    border-bottom: 1px solid @color-swatch3;
-                    margin-bottom: 20px;
-                }
-            } /* end PROMOTED SUB-SECTION */
-
-            .menu-info {
-                display: block;
-                text-align: center;
-                margin: 10px 0;
-                padding: 20px;
-                width: 100%;
-                @media @tablet { 
-                    margin: 0;
-                    padding: 0px;
-                }
-                p {    /* menu-note */
-                    float: left;
-                    width: 100%;
-                    color: @color-swatch4;
-                    margin-bottom: 10px;
-                }
-                dl {    /* menu-dietary-key */
-                    display: inline-block;
-                    margin: 5px 0;
-                    text-align: block;
-                    dt, dd {
-                        display: inline-block;
-                    }
-                    dt {    /* dietary-icon */
-                        vertical-align: top; 
-                        width: 20px;
-                        height: 20px;
-                        background-size: 20px;
-                        background-color: @color-swatch3;
-                        border: 2px solid @color-swatch6;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
-                    dd {    /* text for icon */
-                        font-family:@font-swatch5-font-family;
-                        font-size:@font-swatch5-font-size;
-                        font-weight: @font-swatch5-font-weight;
-                        line-height:@font-swatch5-line-height;
-                        color: @font-swatch5-color; 
-                        letter-spacing: @font-swatch5-letter-spacing;
-                        margin: 0 5px -7px;
-                    }   
-                }/* end dl */
-            }   /* end menu-info */
-    }/* end main */
-
-} /* end .widget.menu */
-
-/* ===============================
-   PAYPAL BUTTON
-   =============================== */
-
-
-.widget.paypalbuynow .widget.button.paypal {
-  margin: 0;
-  padding: 16px 22px 16px 45px;
-  background-image: image('/images/paypal.png');
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: 19px center;
-  margin: 2.2em auto;
-  border: none;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  cursor: pointer;
+// PayPal, Dropbox, Tweet
+.widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button {
+    padding: 4px 8px 4px 40px;
 }
-
-.widget.paypalbuynow .widget.button.paypal:hover {
-  background-color: @font-swatch7-background-color-hover;
-}
-
-
-/* ===============================
-   BUTTON CSS
-   =============================== */
-
-.widget.button {
+.widget.tweet {
     padding: 0;
+    a {
+        padding: 7px 8px 10px 40px;
+    }
 }
 
-.widget.button button
-{
-  background-image: image('/images/button-arrow.png');
-  background-position: right center;
-  background-repeat: no-repeat;
-  margin: 0.5em 0em;
-  padding: 12px 28px 12px 14px;
-  border: 1px solid @color-swatch1;
-  background-color: @font-swatch7-background-color;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  line-height: @font-swatch7-line-height;
-  letter-spacing: @font-swatch7-letter-spacing;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+.widget.button, .widget.paypalbuynow,
+.widget.tweet, .widget.dropbox,
+.widget.clicktocall {
+    margin: 10px 0;
 }
 
-.widget.button button:hover 
-{
-  background-color: @font-swatch7-background-color-hover;
-  cursor: pointer;
-}
-
-.widget.button i {
-    margin-right: 5px;
-}
 
 /* ===============================
    CONTENT CSS
@@ -916,6 +531,14 @@ header.bk-header {
     .widget.content span.expand {
         display:none!important;
     }
+}
+
+// Signup
+.widget.signupform {
+    margin-bottom: 20px;
+    input {
+        margin-right: 4px;
+    }  
 }
 
 /* ===============================
@@ -1092,73 +715,6 @@ hr.line {
    border: none;
 }
 
-hr.line.align-left {
-   margin: 20px auto 20px 0px;
-}
-
-hr.line.align-center {
-   margin: 20px auto;
-}
-
-hr.line.align-right {
-   margin: 20px 0px 20px auto;
-}
-
-
-/* ===============================
-   CLICK TO CALL WIDGET
-   =============================== */
-
-.widget.clicktocall {
-   
-}
-
-.widget.clicktocall a {
-  
-  font-family: @font-swatch4-font-family;
-  font-weight:@font-swatch4-font-weight;
-  color: @font-swatch4-color;
-  letter-spacing: @font-swatch4-letter-spacing;
-  font-size: @font-swatch3-font-size;
-  text-decoration: none;
-}
-
-.widget.clicktocall a:hover {
-  cursor: pointer;
-}
-
-
-/* ===============================
-   REDIRECT WIDGET
-   =============================== */
-
-.widget.redirecttodesktop {
-    padding: 8px 0;
-}
-
-.widget.redirecttodesktop a {
-    padding-right: 30px;
-    padding-top: 2px;
-    background-image: image('/images/desktop.png');
-    background-repeat: no-repeat;
-    background-position: right center;
-    font-size: 12px;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    text-decoration: none;
-    cursor: pointer;
-    color: @font-swatch5-color;
-    font-family: @font-swatch5-font-family;
-
-}
-
-.widget.redirecttodesktop a:hover, .desktop a:active {
-    background-image: image('/images/desktop.png');
-    background-repeat: no-repeat;
-    background-position: right center;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 /* ===============================
    TWITTER FULL
    =============================== */
@@ -1327,96 +883,6 @@ hr.line.align-right {
   box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
 }
 
-/* ===============================
-   DROPBOX WIDGET
-   =============================== */
-
- .widget.dropbox .b-wrap .btn {
- margin: 0;
- padding: 10px 22px 10px 45px;
- background-image: image('/images/dropbox-icon.png');
- background-size: 20px;
- background-repeat: no-repeat;
- background-position: 19px center;
- margin: 2.2em auto;
- border: none;
- font-family: @font-swatch7-font-family;
- font-size: @font-swatch7-font-size;
- font-weight:@font-swatch7-font-weight;
- background-color: @font-swatch7-background-color;
- color: @font-swatch7-color;
- text-decoration: none;
- cursor: pointer;
-}
-
-.widget.dropbox .b-wrap .btn:hover {
- background-color: @font-swatch7-background-color-hover;
-}
-
-.widget.dropbox .b-wrap .file-name {
- font-family: @font-swatch5-font-family;
- font-size: @font-swatch5-font-size;
- font-weight: @font-swatch5-font-weight;
- line-height: @font-swatch5-line-height;
- color: @font-swatch5-color;
- letter-spacing: @font-swatch5-letter-spacing;
- padding-left: 5px;
-}
-
-/* ===============================
-   PAYPAL BUTTON
-   =============================== */
-
-
-.widget.paypalbuynow .widget.button.paypal {
-  margin: 0;
-  padding: 10px 22px 10px 45px;
-  background-image: image('/images/paypal.png');
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: 19px center;
-  margin: 2.2em auto;
-  border: none;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.widget.paypalbuynow .widget.button.paypal:hover {
-  background-color: @font-swatch7-background-color-hover;
-}
-
-/* ===============================
-   TWEET THIS WIDGET
-   =============================== */
-
-.widget.tweet .tweet{
-   margin: 0 0 10px;
-   padding: 14px 0;
-   border: none;
-}
-
-.widget.tweet a {
-  background-repeat: no-repeat;
-  margin: 2.2em auto;
-  background-color: @font-swatch7-background-color;
-  font-family: @font-swatch6-font-family;
-  font-size: @font-swatch6-font-size;
-  font-weight:@font-swatch6-font-weight;
-  text-decoration: none;
-  letter-spacing: @font-swatch7-letter-spacing;
-}
-
-.widget.tweet a:hover, .tweet a:active {
-  cursor: pointer;
-  background-color: lighten(@color-swatch3,5%);
-}
-
-
 /* ==================================
    SOCIAL BAR WIDGET / SOCIAL PROFILE
    =============================== */
@@ -1565,89 +1031,6 @@ hr.line.align-right {
     cursor: pointer;
 }
 
-
-/* ===============================
-   MAP WIDGET
-   =============================== */
-
-.widget.map  {
-  margin: 0px;
-  padding: 0px;
-}
-
-.widget.map .map {
-
-}
-
-
-/* ===============================
-   SIGNUP FORM WIDGET
-   =============================== */
-
-.widget.signupform {
-  padding: 0px;
-}
-
-.widget.signupform fieldset {
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
-.widget.signupform fieldset button, button.blog-search-submit-button, .widget.profile input.btn {
-  padding: 6px 30px 7px 21px;
-}
-
-.widget.signupform label {
-    float: left;
-    width: 100%;
-    font-family:@font-swatch4-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch4-font-weight;
-    color: @font-swatch4-color;
-    line-height:@font-swatch4-line-height;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
-
-.widget.signupform fieldset input, .blog-search-input, .widget.profile input[type=email] {
-    height: 51px;
-    padding: 0;
-    margin-right: -2%;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 20px;
-    border: 1px solid @color-swatch3;
-    max-width: 189px;
-}
-
-.widget.signupform fieldset input:focus {
-  outline: none;
-}
-
-.widget.signupform button, .blog-search-submit-button, .widget.profile .btn {
-  background-image: image('/images/button-arrow.png');
-  background-position: right center;
-  background-repeat: no-repeat;
-  padding: 6px 28px 7px 14px;
-  border: 1px solid @color-swatch3;
-  background-color: @font-swatch7-background-color;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  line-height: @font-swatch7-line-height;
-  letter-spacing: @font-swatch7-letter-spacing;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-}
-
-.widget.signupform button:hover, .blog-search-submit-button:hover {
-  background-color: @font-swatch7-background-color-hover;
-  cursor: pointer;
-}
-
 // -----------------------------
 // ECOMMERECE
 // -----------------------------
@@ -1657,6 +1040,12 @@ hr.line.align-right {
 
 .productlist-filter,
 .delivery {
+    label {
+        display: block;
+        &:last-child {
+            display: none;
+        }
+    }
     select {
         height: 35px;
         margin-bottom: 12px;
@@ -1709,6 +1098,7 @@ hr.line.align-right {
 .widget.ecomproductslist .productlist-filter .productlist-display-form {
     .form-group {
         display: inline-block;
+        margin: 0;
         @media @tablet {
             margin-bottom: 0;
         }
@@ -1744,10 +1134,13 @@ hr.line.align-right {
             }
         }
         .btn {
-            position: relative;
-            top: 1px;
-            margin: 0px 0 0 6px;
+            height: 35px;
             padding: 0px 14px 1px;
+            font-size: 13px;
+            line-height: 32px;
+            &:hover {
+                background-color: @color-swatch3;
+            }
             @media @mobile {
                 margin-bottom: 10px;
             }
@@ -1755,8 +1148,14 @@ hr.line.align-right {
     }
 }
 
+.ecom-productslist-title,
+.ecom-product-title {
+    font-size: 24px;
+}
+
 // Item Count
 .productlist-item-count {
+    margin-top: 10px;
     font-family: @font-swatch4-font-family;
     font-size: 14px;
     font-weight: @font-swatch4-font-weight;
@@ -1858,6 +1257,11 @@ hr.line.align-right {
 // -----------------------------
 
 .blog-post-item {
+    margin: 1.5em 0;
+    padding-bottom: 1em;
+}
+
+.blog-post-item {
     margin: 0 0 2em;
     padding: 0 0 1.3em;
     border-bottom: 1px solid darken(@color-swatch1,10%);
@@ -1868,38 +1272,33 @@ hr.line.align-right {
 
 .blog-post-more-link {
     margin-bottom: 10px;
-    a {
-        padding: 6px 10px;
-    }
 }
 
 .blog-post-feature-image-wrap {
     margin-bottom: 1.3em;
-    background-image: none!important;
+    background-position: -1000%;
     @media @mobile {
         margin-bottom: .5em;
+    }
+    img {
+        max-height: 400px;
     }
 }
 
 .blog-post-title a {
     color: @color-swatch4;
-    &:hover {
-        color: @color-swatch2;
-        text-decoration: none;
-    }
 }
 
 .blog-post-summary {
     padding-bottom: 1.3em;
 }
 
-.blog-post-metadata {
-    padding: 15px 0 0;
-    margin-top: 20px;
-    border-top: 1px solid darken(@color-swatch1,10%);
-}
-
 // Metadata
+.blog-post-metadata {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: darken(@color-swatch1,5%);
+}
 .blog-post-date time,
 .blog-post-publish-date {
     font-family: @font-swatch4-font-family;
@@ -1939,9 +1338,6 @@ hr.line.align-right {
 }
 
 // Category Separation
-.blog-post-tags {
-    margin-bottom: 10px;
-}
 
 .blog-post-tag a {
     color: @color-swatch3;
@@ -1959,27 +1355,39 @@ hr.line.align-right {
 }
 
 // Blog Search
-.blog-search-form {
+.blog-search-form,
+.widget.signupform {
     margin-bottom: 30px;
     label {
-        margin-right: 4px;
-        font-family: @font-swatch4-font-family;
-        font-size: @font-swatch4-font-size;
-        font-weight: @font-swatch4-font-weight;
-        line-height: @font-swatch4-line-height;
-        letter-spacing: @font-swatch4-letter-spacing;
-        color: @font-swatch4-color;
+        display: block;
+        margin-bottom: 4px;
+        color: @color-swatch4;
+        font-size: @font-swatch5-font-size;
+    }
+    input {
+        max-width: 170px;
+        height: 35px;
+        border: 1px solid darken(@color-swatch1,10%);
+        background-color: darken(@color-swatch1,4%);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -webkit-border-radius: 0;
+        @media @mobile {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 12px;
+        }
     }
     button {
-        position: relative;
-        top: 1px;
-        margin: 0px 0 0 6px;
+        height: 35px;
         padding: 0px 14px 1px;
+        font-size: 13px;
+        line-height: 32px;
+        &:hover {
+            background-color: @color-swatch3;
+        }
         @media @mobile {
             margin-bottom: 10px;
-        }
-        &:hover {
-            cursor: pointer;
         }
     }
 }
@@ -2030,7 +1438,7 @@ hr.line.align-right {
         padding: 0;
     }
     .menu-item-image-wrap {
-        background-image: none!important;
+        background-position: -1000%;
         img {
             max-height: 180px;
         }
@@ -2042,7 +1450,7 @@ hr.line.align-right {
 .menu .menu-items li.menu-item-promoted,
 .menu-subsection-promoted {
     padding: 2em;
-    border: 1px dotted darken(@color-swatch1,30%);
+    border: 1px solid darken(@color-swatch1,20%);
 }
 
 // Nutritional Info
@@ -2070,11 +1478,12 @@ hr.line.align-right {
 // Dietary Icons
 .menu .menu-section-item-dietary-props .dietary-icon {
     padding: 2px 4px;
-    border: 1px dotted darken(@color-swatch1,30%);
+    background-color: @color-swatch3;
+    color: @color-swatch1;
     font-family: @font-swatch7-font-family;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: @font-swatch7-font-weight;
-    line-height: @font-swatch7-line-height;
+    line-height: 20px;
     letter-spacing: @font-swatch7-letter-spacing;
 }
 
@@ -2084,10 +1493,6 @@ hr.line.align-right {
    =============================== */
 
 @media only screen and (max-width: 768px) {
-
-  .widget.feature h3 {
-    margin-top:0;
-  }
 
   .canvas {
     width: 100%;
@@ -2194,14 +1599,6 @@ hr.line.align-right {
         margin-right: -7px;
     }
 
-    .widget.signupform label {
-        width: 100%;
-        float: left;
-    }
-
-    .widget.signupform fieldset input {
-    }
-
     /* TWITTER */
 
     .widget.twitter .twitter-content {
@@ -2221,53 +1618,8 @@ hr.line.align-right {
 
 @media only screen and (max-width: 480px) { 
 
-  .widget.feature .feature-bgimg .content {
-    height:500px;
-  }
-
    .main {
     padding: 20px 0px;
-  }
-
-  h1 {
-    font-size: bkscale(@font-swatch1-font-size,0.9);
-    line-height: bkscale(@font-swatch1-line-height,1);
-  }
-
-  h2 {
-    font-size: bkscale(@font-swatch2-font-size,0.9);
-    line-height: bkscale(@font-swatch2-line-height,1);
-  }
-
-  .signupform fieldset input {
-    width:60%;
-  }
-
-  /* UL ALIGN RIGHT */
-
-  /* FEATURE */
-
-
-  .widget.feature .feature-bgimg {
-    height: 400px; 
-   }
-
-  .widget.feature .content {
-    height: 400px;
-    display: block;
-    padding-top: 2em;
-  }
-
-  .widget.feature .feature-bgimg .content h2 {
-    font-size: bkscale(@font-swatch1-font-size,0.9);
-    line-height: bkscale(@font-swatch1-line-height,0.9);
-  }
-
-  .widget.feature .feature-bgimg .content h3 {
-    font-size: bkscale(@font-swatch2-font-size,0.4);
-    line-height: bkscale(@font-swatch2-line-height,0.6);
-    margin-top: 10px;
-    padding-top: 5px;
   }
 
      /* GALLERY */
@@ -2312,43 +1664,6 @@ hr.line.align-right {
     }
 
 
-  /* CLICK TO CALL */
-
-  .widget.clicktocall {
-    padding: 15px 0;
-  }
-  
-  .widget.clicktocall a {
-    background-image: image('/images/ic-call.svg');
-    background-position: 13px center;
-    background-repeat: no-repeat;
-    background-size: 7px;
-    margin: 0.5em 0em;
-    padding: 12px 14px 12px 34px;
-    border: 1px solid @color-swatch1;
-    background-color: @font-swatch7-background-color;
-    font-family: @font-swatch7-font-family;
-    font-weight:@font-swatch7-font-weight;
-    letter-spacing: @font-swatch7-letter-spacing;
-    color: @font-swatch7-color;
-    font-size: .9em;
-    text-decoration: none;
-    text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-  }
-    
-  .widget.clicktocall a:hover {
-    background-image: image('/images/ic-call.svg');
-    background-position: 13px center;
-    background-repeat: no-repeat;
-    background-size: 7px;
-    cursor: pointer;
-  }
-  
-  .widget.clicktocall a:active {
-    box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-  }
-
-
   /* TWITTER WIDGET */
 
   .widget.twitter p {
@@ -2370,19 +1685,6 @@ hr.line.align-right {
       padding-bottom: 50%;
   }
 
-}
-
-@media only screen and (min-width: 1140px) {
-  .wrapper {
-    width: 960px; /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
-
-.header-wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
 }
 
 

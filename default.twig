@@ -4,30 +4,29 @@
 
 <div class="bk-pt-default">
 
-<section class="bk-section">
-    <header class="bk-header">
-        <div class="header-wrapper clearfix">
-            <div class="companyheader">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    <section class="bk-section">
+        <header class="bk-header">
+            <div class="header-wrapper clearfix">
+                <div class="companyheader">
+                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                    {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+                </div>
+                {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
             </div>
-            {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+        </header>
+    </section>
+
+    <div class="canvas">
+        <div class="main wrapper clearfix">
+            {{zone('main')|raw}}
         </div>
-    </header>
-</section>
-
-<div class="canvas">
-    <div class="main wrapper clearfix">
-        {{zone('main')|raw}}
     </div>
-</div>
 
-<footer class="bk-footer">
-    <div class="wrapper clearfix">
-        {{widget('companyaddress', 'companyaddress', {})|raw}}
-        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
-    </div>
-</footer>
+    <footer class="bk-footer">
+        <div class="wrapper clearfix">
+            {{widget('companyaddress', 'companyaddress', {})|raw}}
+        </div>
+    </footer>
 
 </div>
 
