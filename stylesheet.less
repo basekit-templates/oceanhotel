@@ -323,7 +323,7 @@ header.bk-header {
   background-color:@color-swatch1;
 }
 
-button, button.btn, .blogsearch form button {
+button, button.btn, .blogsearch form button, .advancedcontactform__button {
    background-color: @font-swatch7-background-color;
    &:hover {
     background-color: @font-swatch7-background-color-hover!important;
@@ -456,7 +456,8 @@ button.btn,
 .widget.ecomcheckout .checkout-order-button,
 .blog-list-footer.bk-footer a,
 .productlist-search button,
-.blog-search-submit-button {
+.blog-search-submit-button,
+.advancedcontactform__button {
     margin: 0 0 5px;
     padding: 8px 10px;
     border: 1px solid @color-swatch1;
@@ -989,7 +990,8 @@ hr.line {
 // -----------------------------
 
 .productlist-filter,
-.delivery {
+.delivery,
+.advancedcontactform {
     label {
         display: block;
         &:last-child {
@@ -1004,10 +1006,10 @@ hr.line {
         -moz-border-radius: 0;
         border-radius: 0;
         border: 1px solid darken(@color-swatch1,10%);
-        background-color: darken(@color-swatch1,4%);
         text-indent: 0.01px;
         text-overflow: '';
         color: darken(@color-swatch5,5%);
+        background-color: white;
         cursor: pointer;
         &:focus {
             outline: 0;
@@ -1022,6 +1024,10 @@ hr.line {
     select[name="displayCount"] {
         margin-bottom: 0;
     }
+}
+
+.advancedcontactform label:last-child {
+  display: inline;
 }
 
 // Product Filter
