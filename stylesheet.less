@@ -16,20 +16,40 @@ body {
   padding: 0;
 }
 
-@media only screen and (min-width: 1140px) {
-  .wrapper {
-    width: 960px; /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
-
 .wrapper {
     width: 90%;
     margin: 0 5%;
+
+    @media only screen and (min-width: 1140px) {
+        width: 960px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
 }
 
-.canvas .widget {
+.canvas-wrapper  {
+  position: relative;
+}
+
+.canvas  {
+  background-color: @color-swatch1;
+  height: 100%;
+  left: 5%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 90%;
+  z-index: 1;
+
+  @media only screen and (min-width: 1333px) {
+    left: 50%;
+    margin-left: -600px;
+    width: 1200px;
+  }
+
+  .widget {
     clear: both;
+  }
 }
 
 .header-wrapper {
@@ -70,16 +90,26 @@ blockquote:before {
    CUSTOM CSS
    =============================== */
 
-.canvas  {
-  background-color: @color-swatch1;
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0px;
+.main {
+  padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
-.main {
-  padding: 60px 0px;
+#page-zones__main:empty,
+.empty-zone,
+#page-zones__main > .widget:not(.row) {
+  margin-left: auto;
+  margin-right: auto;
+  width: ~"calc(100% * 0.9 * 0.9)";
+
+  @media only screen and (max-width: 768px) {
+    width: ~"calc(100% * 0.9)";
+  }
+
+  @media only screen and (min-width: 1333px) {
+    width: 1080px;
+  }
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
@@ -693,7 +723,7 @@ hr.line {
     margin-bottom:20px;
 }
 
-.widget.twitter ul li {
+.widget.twitter ul li:not(.widget__item) {
     border-bottom: none;
     list-style: none;
     font-family: @font-swatch5-font-family;
@@ -1698,11 +1728,12 @@ hr.line {
 @media only screen and (max-width: 768px) {
 
   .canvas {
+    left: 0;
     width: 100%;
   }
 
   .main {
-    padding: 40px 0px;
+    padding: 0;
   }
 
 .widget .extendednavigation a.pull:after {
@@ -1810,7 +1841,7 @@ hr.line {
 @media only screen and (max-width: 480px) {
 
    .main {
-    padding: 20px 0px;
+    padding: 0;
   }
 
     /* SLIDESHOW */
