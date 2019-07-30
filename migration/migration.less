@@ -22,6 +22,14 @@
     overflow: inherit;
 }
 
+.bk-section {
+    position: relative;
+}
+
+ul.widget__list {
+    background-color: transparent;
+    border: 0;
+}
 
 
 
@@ -42,7 +50,7 @@
 
 
 // Move spacing to first widget in the main zone (not sections)
-.edit #page-zones__main-overlay + .widget:not(.row),
+&.edit #page-zones__main-overlay + .widget:not(.row),
 #page-zones__main > .widget:not(.row):first-child {
     margin-top: 60px;
     
@@ -50,7 +58,7 @@
         margin-top: 50px;
     }
     @media @mobile {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 
