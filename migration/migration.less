@@ -10,103 +10,124 @@
 // -----------------------------
 
 
-.bk-section {
-  position: relative;
+.main.wrapper {
+    width: 100%;
+    margin: 0;
 }
-
-&.edit .canvas {
-  @media only screen and (min-width: 1333px) {
-    left: 5%;
-    margin-left: 0;
-    width: 90%;
-  }
-
-  @media only screen and (min-width: 1533px) {
-    left: 50%;
-    margin-left: -600px;
-    width: 1200px;
-  }
-}
-
-#page-zones__main:empty,
-.empty-zone,
-#page-zones__main > .widget:not(.row) {
-  @media only screen and (min-width: 1333px) {
-    width: ~"calc(100% * 0.9 * 0.9)";
-  }
-
-  @media only screen and (min-width: 1533px) {
-    width: 1080px;
-  }
+.main {
+    padding: 0;
 }
 
 .widget.content {
-  overflow: visible;
+    overflow: inherit;
 }
 
-ul.widget__list {
-  background-color: transparent;
-  border: 0;
-}
 
+
+
+// Migration styles
+// -----------------------------
+
+
+.empty-zone,
+#page-zones__main:empty,
+.site-width-container,
+#page-zones__main > .widget:not(.row),
 .row:not(.widget):not(.row--width-no-padding) .row__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
   width: 90%;
 }
 
-#page-zones__main > .row + .widget:not(.row) {
-  margin-top: 20px;
 
-  @media @tablet {
-    margin-top: 30px;
-  }
-}
-
-
-
-// Readds spacing to the first widget in the zone - these values should replicate what was on the .main class in the template
-#page-zones__main:empty,
+// Move spacing to first widget in the main zone (not sections)
 .edit #page-zones__main-overlay + .widget:not(.row),
-#page-zones__main > .widget:not(.row):first-child,
-#page-zones__main > .row + .widget:not(.row) {
-  margin-top: 60px;
-
-  @media @tablet {
-    margin-top: 40px;
-  }
-
-  @media @mobile {
-    margin-top: 20px;
-  }
+#page-zones__main > .widget:not(.row):first-child {
+    margin-top: 70px;
+    
+    @media @tablet {
+        margin-top: 50px;
+    }
+    @media @mobile {
+        margin-top: 30px;
+    }
 }
 
 
-// Readds spacing to the last widget in the zone - these values should replicate what was on the .main class in the template
-#page-zones__main:empty,
+// Move spacing to last widget in the main zone (not sections)
 #page-zones__main > .widget:not(.row):last-child {
-  margin-bottom: 60px;
-
-  @media @tablet {
-    margin-bottom: 40px;
-  }
-
-  @media @mobile {
-    margin-top: 20px;
-  }
+    margin-bottom: 50px;
+    
+    @media @tablet {
+        margin-bottom: 40px;
+    }
+    @media @mobile {
+        margin-bottom: 20px;
+    }
 }
 
-// Add spacing to the top of a widget when it procedes a section
+
+// Add spacing to the top of a widget when it follows a section
 #page-zones__main > .row + .widget:not(.row) {
-  margin-top: 15px;
+    margin-top: 50px;
+    
+    @media @tablet {
+        margin-top: 40px;
+    }
+    @media @mobile {
+        margin-top: 20px;
+    }
 }
 
-// Adds spacing to the top and bottom of a section when a widget precedes it
-#page-zones__main > .widget:not(.row) + .row {
-  margin-bottom: 15px;
-  margin-top: 15px;
 
-  &:not(:last-child) {
-    margin-bottom: 0;
-  }
+// Adds spacing to the section when a widget is before it
+#page-zones__main > .widget:not(.row) + .row {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+    @media @mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &:not(:last-child) {
+         margin-bottom: 0;
+    }
+}
+
+
+// Empy zone spacing
+&.edit .canvas #page-zones__main:empty {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    @media @tablet {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    @media @mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+// Section controls
+// -----------------------------
+
+
+.row-overlay:before,
+.row-overlay:after {
+    background: none !important;
+}
+.row-overlay:before {
+    background-image: linear-gradient(to right, transparent , #e8e8e8) !important;
+}
+.row-overlay:after {
+    background-image: linear-gradient(to left, transparent , #e8e8e8) !important;
 }
 
 
