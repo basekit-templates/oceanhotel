@@ -1,61 +1,67 @@
-#migrated-site .bk-section {
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+
+.bk-section {
   position: relative;
 }
 
-#migrated-site.edit {
-  .canvas {
-    @media only screen and (min-width: 1333px) {
-      left: 5%;
-      margin-left: 0;
-      width: 90%;
-    }
-
-    @media only screen and (min-width: 1533px) {
-      left: 50%;
-      margin-left: -600px;
-      width: 1200px;
-    }
-  }
-
-  #page-zones__main:empty,
-  .empty-zone,
-  #page-zones__main > .widget:not(.row) {
-    @media only screen and (min-width: 1333px) {
-      width: ~"calc(100% * 0.9 * 0.9)";
-    }
-
-    @media only screen and (min-width: 1533px) {
-      width: 1080px;
-    }
-  }
-
-  .widget.content {
-    overflow: visible;
-  }
-
-  ul.widget__list {
-    background-color: transparent;
-    border: 0;
-  }
-}
-
-#migrated-site {
-  .row:not(.widget):not(.row--width-no-padding) .row__container {
+&.edit .canvas {
+  @media only screen and (min-width: 1333px) {
+    left: 5%;
+    margin-left: 0;
     width: 90%;
   }
 
-  #page-zones__main > .row + .widget:not(.row) {
-    margin-top: 20px;
-
-    @media @tablet {
-      margin-top: 30px;
-    }
-  }
-
-  .widget.ecomproductslist .productlist-filter {
-    margin-left: 0;
+  @media only screen and (min-width: 1533px) {
+    left: 50%;
+    margin-left: -600px;
+    width: 1200px;
   }
 }
+
+#page-zones__main:empty,
+.empty-zone,
+#page-zones__main > .widget:not(.row) {
+  @media only screen and (min-width: 1333px) {
+    width: ~"calc(100% * 0.9 * 0.9)";
+  }
+
+  @media only screen and (min-width: 1533px) {
+    width: 1080px;
+  }
+}
+
+.widget.content {
+  overflow: visible;
+}
+
+ul.widget__list {
+  background-color: transparent;
+  border: 0;
+}
+
+.row:not(.widget):not(.row--width-no-padding) .row__container {
+  width: 90%;
+}
+
+#page-zones__main > .row + .widget:not(.row) {
+  margin-top: 20px;
+
+  @media @tablet {
+    margin-top: 30px;
+  }
+}
+
+
 
 // Readds spacing to the first widget in the zone - these values should replicate what was on the .main class in the template
 #page-zones__main:empty,
@@ -101,4 +107,7 @@
   &:not(:last-child) {
     margin-bottom: 0;
   }
+}
+
+
 }
