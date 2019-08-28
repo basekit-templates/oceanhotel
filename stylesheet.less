@@ -70,6 +70,11 @@ blockquote:before {
    CUSTOM CSS
    =============================== */
 
+
+.bk-section {
+  position: relative;
+}
+
 .canvas  {
   background-color: @color-swatch1;
   max-width: 1200px;
@@ -503,7 +508,6 @@ button.btn,
 .widget.content
 {
     padding: 0;
-    overflow: hidden;
 }
 
 .widget.content span.expand
@@ -685,7 +689,7 @@ hr.line {
     text-decoration: underline;
 }
 
-.widget.twitter ul {
+.widget.twitter ul:not(.widget__list) {
     padding: 0;
     margin: 0;
     background-color: @color-swatch1;
@@ -1873,6 +1877,3 @@ hr.line {
 .clearfix {
   *zoom: 1;
 }
-
-
-@import "@{templateLocal}/migration/migration.less";
